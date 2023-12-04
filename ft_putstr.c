@@ -6,7 +6,7 @@
 /*   By: anfichet <anfichet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 15:58:57 by anfichet          #+#    #+#             */
-/*   Updated: 2023/12/02 18:09:37 by anfichet         ###   ########lyon.fr   */
+/*   Updated: 2023/12/04 19:00:35 by anfichet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,15 @@
 
 void	ft_putchar(char c, int *addr_count)
 {
-	*addr_count += write(1, &c, 1);
+	ssize_t	written;
+
+	written = write(1, &c, 1);
+	if (written == -1)
+	{
+		*addr_count = -1;
+		return ;
+	}
+	*addr_count += written;
 }
 
 void	ft_putstr(char *str, int *addr_count)

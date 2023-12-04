@@ -6,7 +6,7 @@
 /*   By: anfichet <anfichet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 12:51:15 by anfichet          #+#    #+#             */
-/*   Updated: 2023/12/04 13:49:29 by anfichet         ###   ########lyon.fr   */
+/*   Updated: 2023/12/04 19:00:53 by anfichet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,6 @@ void	ft_putnbr_base(int nbr, char *base, int *addr_count)
 	if (nb >= (long)lenbase)
 		ft_putnbr_base(nb / lenbase, base, addr_count);
 	ft_putchar(base[nb % lenbase], addr_count);
-	{
-		*addr_count = -1;
-		return ;
-	}
 }
 
 void	ft_unsigned_putnbr(unsigned long int nbr, char *base, int *addr_count)
@@ -43,10 +39,6 @@ void	ft_unsigned_putnbr(unsigned long int nbr, char *base, int *addr_count)
 	if (nb >= lenbase)
 		ft_unsigned_putnbr(nb / lenbase, base, addr_count);
 	ft_putchar(base[nb % lenbase], addr_count);
-	{
-		*addr_count = -1;
-		return ;
-	}
 }
 
 void	ft_put_address(unsigned long int nbr, int *addr_count)
