@@ -19,9 +19,9 @@ int main(void)
 	printf("\t\tft_printf = %d\n", ft_printf("%d\n", d));
 	printf("\t\tog_printf = %d\n", printf("%d\n", d));
 
-	// printf("%d\n", ft_printf("my printf : char = %c - str = %s - decimal %d - integer %i - unsigned int %u - hexa %x - HEXA %X - pourcent %% - address %p\n", c, str, d, i, unb, hexa, HEXA, ptr)); 
-	// printf("%d\n", printf("og printf : char = %c - str = %s - decimal %d - integer %i - unsigned int %u - hexa %x - HEXA %X - pourcent %% - address %p\n", c, str, d, i, unb, hexa, HEXA, ptr));
-	// printf("\n");
+	printf("%d\n", ft_printf("my printf : char = %c - str = %s - decimal %d - integer %i - unsigned int %u - hexa %x - HEXA %X - pourcent %% - address %p\n", c, str, d, i, unb, hexa, HEXA, ptr)); 
+	printf("%d\n", printf("og printf : char = %c - str = %s - decimal %d - integer %i - unsigned int %u - hexa %x - HEXA %X - pourcent %% - address %p\n", c, str, d, i, unb, hexa, HEXA, ptr));
+	printf("\n");
 	// printf("\t\tft_printf = %d\n", ft_printf("FT_PRINTF = H%kello%"));
 	// printf("\t\tog_printf = %d\n", printf("OG_PRINTF = H%kello%"));
 	// printf("\n");
